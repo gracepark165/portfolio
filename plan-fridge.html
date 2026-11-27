@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>냉집사 기획서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* 기획서: 흰 종이에 검정 글씨, 표 중심의 문서 */
+:root{color-scheme:light dark;--bg:light-dark(#F4F2FA,#14121F);--paper:light-dark(#fff,#1E1B2E);--ink:light-dark(#16142A,#EEEAFB);--muted:light-dark(#55526E,#B5B0CC);--line:light-dark(#E4DFF7,#35314A);--acc:light-dark(#5B45D0,#B7ABFF);--soft:light-dark(#F1EEFF,#2A2640)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 "Noto Sans KR",system-ui,sans-serif;word-break:keep-all;overflow-wrap:break-word;overflow-x:clip}
+.paper{max-width:860px;margin:clamp(16px,4vw,48px) auto;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,6vw,64px)}
+.back{display:inline-block;font-weight:700;color:var(--acc);text-decoration:none;margin:24px max(16px,calc(50% - 430px)) 0}
+.meta{font-size:14px;color:var(--muted)}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:8px 0 6px}
+.sub{font-size:18px;color:var(--muted);margin:0 0 28px}
+h2{font-size:21px;margin:40px 0 12px;padding-top:20px;border-top:1px solid var(--line)}
+h2 span{color:var(--acc);margin-right:8px}
+p{margin:0 0 10px} ul,ol{margin:0 0 10px;padding-left:1.3em} li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:6px 0 12px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700;white-space:nowrap}
+.box{background:var(--soft);border-radius:12px;padding:14px 18px;font-weight:700}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 12px}
+.flow span{background:var(--soft);border-radius:10px;padding:8px 12px;font-size:14.5px;font-weight:600}
+.flow i{font-style:normal;color:var(--acc);font-weight:800}
+.note{font-size:13.5px;color:var(--muted)}
+@media(max-width:600px){table{font-size:13.5px}th,td{padding:8px}}
+@media print{body{background:#fff}.back{display:none}.paper{border:0;margin:0;max-width:none}}
+</style></head><body>
+<a class="back" href="index.html#fridge">← 포트폴리오로 돌아가기</a>
+<article class="paper">
+<p class="meta">서비스 기획서 · 2인 팀 프로젝트 · 박여운: 팀 리더</p>
+<h1>냉집사</h1>
+<p class="sub">입력은 최소로, 먼저 먹을 재료는 앱이 알려 주는 냉장고 관리 웹 앱</p>
+
+<h2><span>1</span>배경</h2>
+<p>냉장고 속 재료를 기억하지 못해 중복 구매하거나 먹을 시점을 놓칩니다. 기존 관리 앱은 모든 유통기한을 입력하게 해서, 관리보다 입력이 더 귀찮아 오래 쓰지 못합니다.</p>
+
+<h2><span>2</span>문제 정의</h2>
+<table>
+<tr><th>대상</th><td>장을 보지만 냉장고 속 재료를 다 기억하지 못하는 1~2인 가구</td></tr>
+<tr><th>상황</th><td>무엇이 남았는지 모른 채 장을 보거나, 저녁 메뉴를 정할 때</td></tr>
+<tr><th>문제</th><td>재료를 버리게 되고, 입력 부담 때문에 관리 앱을 포기한다</td></tr>
+<tr><th>핵심 질문</th><td>입력을 거의 하지 않아도 먼저 먹어야 할 재료가 한눈에 보이게 하려면?</td></tr>
+</table>
+
+<h2><span>3</span>역할 분담</h2>
+<table>
+<tr><th>팀 구성</th><td>2명</td></tr>
+<tr><th>박여운</th><td>팀 리더 — 프로젝트 방향 설정과 진행을 이끌고, UX/UI(사용자 흐름·사용성·화면 디자인)에 집중</td></tr>
+</table>
+
+<h2><span>4</span>UX 원칙</h2>
+<ul>
+<li><b>첫 사용 장벽 낮추기</b> — 예시 재료로 먼저 보여 주고, 내 재료로 시작할지 고르게 한다</li>
+<li><b>입력 부담 줄이기</b> — 사진 등록, 날짜는 확인만. 유통기한 대신 소비 목표(3일·1주·이번 달)</li>
+<li><b>우선순위가 한눈에</b> — 요약 카드, D-day 배지, 오늘 내일 해요 / 잊혀지는 중 / 싱싱해요 필터, 냉장·냉동·실온 탭</li>
+<li><b>결정을 대신해 주기</b> — 오늘 저녁 메뉴 하나와 “이걸로 할게요 / 다른 메뉴” 두 버튼</li>
+<li><b>기록은 한 번 탭</b> — 다 먹었어요 / 조금 남았어요 / 버렸어요</li>
+<li><b>친근한 톤</b> — 말을 거는 문구, 냉장고 캐릭터, 밝은 블루 톤</li>
+</ul>
+
+<h2><span>5</span>사용자 흐름</h2>
+<div class="flow"><span>예시로 둘러보기 / 내 재료로 시작</span><i>→</i><span>사진으로 재료 등록</span><i>→</i><span>소비 목표 선택</span><i>→</i><span>먼저 먹을 재료 · 메뉴 제안</span><i>→</i><span>먹은 뒤 한 번 탭으로 기록</span></div>
+
+<h2><span>6</span>화면 구성</h2>
+<table>
+<tr><th>하단 탭</th><th>내용</th></tr>
+<tr><td>냉장고</td><td>요약 카드, 오늘 저녁 메뉴 제안, 보관 위치 탭과 상태 필터, 재료 목록</td></tr>
+<tr><td>영상 확인</td><td>메뉴 관련 영상</td></tr>
+<tr><td>장보기 올리기</td><td>장 본 재료 등록</td></tr>
+<tr><td>이번 주</td><td>한 주 소비 계획</td></tr>
+</table>
+
+<h2><span>7</span>핵심 기능과 검증 기준</h2>
+<table>
+<tr><th>기능</th><th>내용</th><th>검증 질문</th></tr>
+<tr><td>재료 등록</td><td>사진 → 품목·날짜 확인·수정</td><td>1분 안에 끝나는가</td></tr>
+<tr><td>소비 계획</td><td>3일·1주·이번 달 목표 선택</td><td>날짜 입력 부담이 줄어드는가</td></tr>
+<tr><td>우선 소비</td><td>먼저 먹을 재료 목록과 알림</td><td>알림이 소비로 이어지는가</td></tr>
+<tr><td>재고 반영</td><td>다 먹었어요 / 조금 남았어요 / 버렸어요</td><td>재고가 최신으로 유지되는가</td></tr>
+<tr><td>메뉴 도움</td><td>보유 재료 활용 메뉴 추천</td><td>식재료 소진에 기여하는가</td></tr>
+</table>
+<p class="note">배포된 프로토타입 기준(예시 재료). 실제 사용자 수와 소비 개선 성과는 아직 확인하지 않았습니다.</p>
+<p class="meta">서비스: planning2-gold.vercel.app</p>
+</article></body></html>

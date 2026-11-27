@@ -328,7 +328,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
 .ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .ux-grid div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
 .ux-grid b{display:block;font-size:17px;margin-bottom:6px}.ux-grid p{font-size:14.5px;color:var(--muted);line-height:1.65}
-.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.docs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .docs a{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:18px;background:var(--navy);color:#fff;text-decoration:none}
 .docs a:first-child{background:var(--accent-fill)}
 .docs small{font-size:12px;font-weight:700;letter-spacing:.08em;opacity:.8}.docs b{font-size:16px;overflow-wrap:anywhere}
@@ -347,6 +347,18 @@ body{word-break:keep-all;overflow-wrap:break-word}
 .br-row dd{margin:0;font-size:15px;line-height:1.6}
 @media (max-width:900px){.brief-grid{grid-template-columns:1fr}}
 @media (max-width:520px){.br-row{grid-template-columns:1fr;gap:2px}.nav a[href="#briefs"]{display:none}}
+/* 화면설계서 미리보기 */
+.sb{border-top:1px solid var(--line);padding:16px 22px 20px;background:var(--soft)}
+.sb-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:12px}
+.sb-head b{font-size:15px;font-weight:800}
+.sb-head span{font-size:13px;color:var(--muted)}
+.sb-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sb-row a{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--muted);font-size:12.5px}
+.sb-row img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff;transition:transform .2s}
+.sb-row a:hover img{transform:translateY(-2px)}
+.sb-links{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.sb-links a{font-size:14px;font-weight:700;color:var(--accent-text);text-decoration:none}
+@media (max-width:900px){.docs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* 서비스 한눈에 */
 .svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .svc{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
@@ -503,15 +515,17 @@ section{padding-block:clamp(72px,10vw,128px)}
 </div></section>
 
 <section id="briefs" class="home"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Planning Docs</span><h2>기획서 한눈에 보기</h2><p class="muted">두 프로젝트의 기획서를 한 장으로 요약했습니다. 전체 기획서는 각 카드에서 열 수 있습니다.</p></div>
+  <div class="sec-head"><span class="eyebrow">Planning Docs</span><h2>기획서 한눈에 보기</h2><p class="muted">두 프로젝트의 기획서를 한 장으로 요약하고, 실제 화면으로 만든 화면설계서(IA · 플로우 차트 · 화면별 설명)를 함께 붙였습니다.</p></div>
   <div class="brief-grid">
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>IRB Helper 기획서 요약</h4><a href="plan-irb.html">전체 기획서 보기 →</a></div>
     <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
+    <div class="sb"><div class="sb-head"><b>화면설계서</b><span>IA · 플로우 차트 · 화면별 설명 · 총 17쪽</span></div><div class="sb-row"><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=4" target="_blank" rel="noopener"><img src="img/sb/irb-04.jpg" alt="화면설계서 IA" loading="lazy"><span>IA</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=5" target="_blank" rel="noopener"><img src="img/sb/irb-05.jpg" alt="화면설계서 플로우 차트" loading="lazy"><span>플로우 차트</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=9" target="_blank" rel="noopener"><img src="img/sb/irb-09.jpg" alt="화면설계서 S-01 서비스 소개" loading="lazy"><span>S-01 서비스 소개</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=14" target="_blank" rel="noopener"><img src="img/sb/irb-14.jpg" alt="화면설계서 S-06 질문형 인터뷰" loading="lazy"><span>S-06 질문형 인터뷰</span></a></div><div class="sb-links"><a href="docs/IRB_Helper_storyboard_v1.0.pdf" target="_blank" rel="noopener">PDF 보기 ↗</a><a href="docs/IRB_Helper_storyboard_v1.0.pptx">PPT 내려받기</a></div></div>
   </div>
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>냉집사 기획서 요약</h4><a href="plan-fridge.html">전체 기획서 보기 →</a></div>
     <dl><div class="br-row"><dt>한 줄 정의</dt><dd>입력은 최소로, 먼저 먹을 재료는 앱이 알려 주는 냉장고 관리 웹 앱</dd></div><div class="br-row"><dt>대상</dt><dd>냉장고 속 재료를 다 기억하지 못하는 1~2인 가구</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>재료를 잊어 버리게 되고, 기존 앱은 입력 부담이 커서 오래 못 씀</dd></div><div class="br-row"><dt>팀 · 내 역할</dt><dd>2인 팀 · 박여운: 팀 리더 — 프로젝트를 이끌며 UX/UI 사용성과 디자인에 집중</dd></div><div class="br-row"><dt>UX 원칙</dt><dd>첫 사용 장벽 낮추기 · 입력 부담 줄이기 · 우선순위가 한눈에 · 결정 대신해 주기</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>사진 등록 · 소비 목표 · 우선 소비 알림 · 한 번 탭 재고 반영 · 메뉴 추천</dd></div><div class="br-row"><dt>화면 구성</dt><dd>하단 탭 4개: 냉장고 · 영상 확인 · 장보기 올리기 · 이번 주</dd></div><div class="br-row"><dt>검증 기준</dt><dd>등록 1분 이내 · 날짜 입력 부담 감소 · 알림→소비 전환 · 재고 최신 유지</dd></div></dl>
+    <div class="sb"><div class="sb-head"><b>화면설계서</b><span>IA · 플로우 차트 · 화면별 설명 · 총 21쪽</span></div><div class="sb-row"><a href="docs/fridge_storyboard_v1.0.pdf#page=4" target="_blank" rel="noopener"><img src="img/sb/fridge-04.jpg" alt="화면설계서 IA" loading="lazy"><span>IA</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=5" target="_blank" rel="noopener"><img src="img/sb/fridge-05.jpg" alt="화면설계서 플로우 차트" loading="lazy"><span>플로우 차트</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=15" target="_blank" rel="noopener"><img src="img/sb/fridge-15.jpg" alt="화면설계서 F-07 냉장고 홈" loading="lazy"><span>F-07 냉장고 홈</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=16" target="_blank" rel="noopener"><img src="img/sb/fridge-16.jpg" alt="화면설계서 F-08 재료 시트" loading="lazy"><span>F-08 재료 시트</span></a></div><div class="sb-links"><a href="docs/fridge_storyboard_v1.0.pdf" target="_blank" rel="noopener">PDF 보기 ↗</a><a href="docs/fridge_storyboard_v1.0.pptx">PPT 내려받기</a></div></div>
   </div>
   </div>
 </div></section>
@@ -581,11 +595,13 @@ section{padding-block:clamp(72px,10vw,128px)}
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>IRB Helper 기획서 요약</h4><a href="plan-irb.html">전체 기획서 보기 →</a></div>
     <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
+    <div class="sb"><div class="sb-head"><b>화면설계서</b><span>IA · 플로우 차트 · 화면별 설명 · 총 17쪽</span></div><div class="sb-row"><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=4" target="_blank" rel="noopener"><img src="img/sb/irb-04.jpg" alt="화면설계서 IA" loading="lazy"><span>IA</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=5" target="_blank" rel="noopener"><img src="img/sb/irb-05.jpg" alt="화면설계서 플로우 차트" loading="lazy"><span>플로우 차트</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=9" target="_blank" rel="noopener"><img src="img/sb/irb-09.jpg" alt="화면설계서 S-01 서비스 소개" loading="lazy"><span>S-01 서비스 소개</span></a><a href="docs/IRB_Helper_storyboard_v1.0.pdf#page=14" target="_blank" rel="noopener"><img src="img/sb/irb-14.jpg" alt="화면설계서 S-06 질문형 인터뷰" loading="lazy"><span>S-06 질문형 인터뷰</span></a></div><div class="sb-links"><a href="docs/IRB_Helper_storyboard_v1.0.pdf" target="_blank" rel="noopener">PDF 보기 ↗</a><a href="docs/IRB_Helper_storyboard_v1.0.pptx">PPT 내려받기</a></div></div>
   </div>
 
   <h3 class="part"><i>7</i>제출 자료</h3>
   <div class="docs">
     <a href="plan-irb.html"><small>기획서</small><b>IRB Helper 기획서 보기</b></a>
+    <a href="docs/IRB_Helper_storyboard_v1.0.pdf" target="_blank" rel="noopener"><small>화면설계서 (PDF · 17쪽)</small><b>IA · 플로우 · 화면 설계 ↗</b></a>
     <a href="https://irb-helper.vercel.app/intro" target="_blank" rel="noopener"><small>서비스 링크</small><b>irb-helper.vercel.app ↗</b></a>
     <a href="https://github.com/gracepark165" target="_blank" rel="noopener"><small>소스코드</small><b>github.com/gracepark165 ↗</b></a>
   </div>
@@ -637,13 +653,15 @@ section{padding-block:clamp(72px,10vw,128px)}
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>냉집사 기획서 요약</h4><a href="plan-fridge.html">전체 기획서 보기 →</a></div>
     <dl><div class="br-row"><dt>한 줄 정의</dt><dd>입력은 최소로, 먼저 먹을 재료는 앱이 알려 주는 냉장고 관리 웹 앱</dd></div><div class="br-row"><dt>대상</dt><dd>냉장고 속 재료를 다 기억하지 못하는 1~2인 가구</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>재료를 잊어 버리게 되고, 기존 앱은 입력 부담이 커서 오래 못 씀</dd></div><div class="br-row"><dt>팀 · 내 역할</dt><dd>2인 팀 · 박여운: 팀 리더 — 프로젝트를 이끌며 UX/UI 사용성과 디자인에 집중</dd></div><div class="br-row"><dt>UX 원칙</dt><dd>첫 사용 장벽 낮추기 · 입력 부담 줄이기 · 우선순위가 한눈에 · 결정 대신해 주기</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>사진 등록 · 소비 목표 · 우선 소비 알림 · 한 번 탭 재고 반영 · 메뉴 추천</dd></div><div class="br-row"><dt>화면 구성</dt><dd>하단 탭 4개: 냉장고 · 영상 확인 · 장보기 올리기 · 이번 주</dd></div><div class="br-row"><dt>검증 기준</dt><dd>등록 1분 이내 · 날짜 입력 부담 감소 · 알림→소비 전환 · 재고 최신 유지</dd></div></dl>
+    <div class="sb"><div class="sb-head"><b>화면설계서</b><span>IA · 플로우 차트 · 화면별 설명 · 총 21쪽</span></div><div class="sb-row"><a href="docs/fridge_storyboard_v1.0.pdf#page=4" target="_blank" rel="noopener"><img src="img/sb/fridge-04.jpg" alt="화면설계서 IA" loading="lazy"><span>IA</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=5" target="_blank" rel="noopener"><img src="img/sb/fridge-05.jpg" alt="화면설계서 플로우 차트" loading="lazy"><span>플로우 차트</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=15" target="_blank" rel="noopener"><img src="img/sb/fridge-15.jpg" alt="화면설계서 F-07 냉장고 홈" loading="lazy"><span>F-07 냉장고 홈</span></a><a href="docs/fridge_storyboard_v1.0.pdf#page=16" target="_blank" rel="noopener"><img src="img/sb/fridge-16.jpg" alt="화면설계서 F-08 재료 시트" loading="lazy"><span>F-08 재료 시트</span></a></div><div class="sb-links"><a href="docs/fridge_storyboard_v1.0.pdf" target="_blank" rel="noopener">PDF 보기 ↗</a><a href="docs/fridge_storyboard_v1.0.pptx">PPT 내려받기</a></div></div>
   </div>
 
   <h3 class="part"><i>6</i>제출 자료</h3>
   <div class="docs">
     <a href="plan-fridge.html"><small>기획서</small><b>냉집사 기획서 보기</b></a>
+    <a href="docs/fridge_storyboard_v1.0.pdf" target="_blank" rel="noopener"><small>화면설계서 (PDF · 21쪽)</small><b>IA · 플로우 · 화면 설계 ↗</b></a>
     <a href="https://planning2-gold.vercel.app/" target="_blank" rel="noopener"><small>서비스 링크</small><b>planning2-gold.vercel.app ↗</b></a>
-    <a href="https://github.com/gracepark165" target="_blank" rel="noopener"><small>소스코드</small><b>github.com/gracepark165 ↗</b></a>
+    <a href="https://github.com/gracepark165/planning2" target="_blank" rel="noopener"><small>소스코드</small><b>github.com/gracepark165/planning2 ↗</b></a>
   </div>
 </div></section>
 

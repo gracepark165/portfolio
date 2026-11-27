@@ -423,7 +423,7 @@ section{padding-block:clamp(72px,10vw,128px)}
       <h1>현업의 반복 업무를<br><em>AI 서비스로</em><br>설계합니다</h1>
       <p class="lede">임상연구 현장에서 IRB 신청과 보완 대응을 맡으며 겪은 반복 업무를, 연구계획서만 넣으면 공용IRB 신청 초안을 만드는 <b>IRB Helper</b>로 기획하고 웹 프로토타입으로 구현했습니다.</p>
       <ul class="skills" aria-label="핵심 역량">
-        <li>업무 흐름 분석</li><li>요구사항 구체화</li><li>AI 서비스 기획</li><li>서비스 시나리오 검토</li><li>웹 프로토타입 구현</li>
+        <li>업무 흐름 분석</li><li>요구사항 구체화</li><li>AI 서비스 기획</li><li>화면 구성</li><li>웹 프로토타입 구현</li>
       </ul>
       <div class="ctas"><a class="btn-d" href="#about">역량 보기 ↓</a><a class="btn-o" href="#projects">프로젝트 보기</a></div>
     </div>
@@ -458,7 +458,7 @@ section{padding-block:clamp(72px,10vw,128px)}
   <div class="sec-head"><span class="eyebrow">Core Strengths</span><h2>현업의 반복 업무를 AI 서비스로 설계하는 박여운입니다</h2></div>
   <div class="story">
     <p>임상연구 현장에서 IRB 신청과 보완 대응을 맡으며, 여러 문서에 흩어진 정보를 다시 찾아 정리하고 서식에 맞춰 옮기는 업무를 경험했습니다. 이 경험을 바탕으로 연구계획서를 입력하면 공용IRB 신청에 필요한 초안을 생성하는 <b>IRB Helper</b>를 기획하고, 웹 프로토타입으로 구현했습니다. 연구자가 어떤 정보를 제공해야 하는지, AI가 어디까지 초안을 작성하고 사람이 무엇을 확인해야 하는지 업무 흐름에 맞춰 설계했습니다.</p>
-    <p>한국보건의료정보원에서는 보건의료 메타데이터 중개포털의 서비스 시나리오와 운영 요건을 검토했습니다.</p>
+    <p>한국보건의료정보원에서는 보건의료 메타데이터 중개포털에 들어갈 화면 구성을 보조했습니다.</p>
     <p class="story-key">현업의 업무를 단계별로 파악하고, 각 단계에 필요한 정보와 기능을 구체화하는 것이 제 강점입니다.</p>
   </div>
   <div class="skill-grid">
@@ -484,10 +484,10 @@ section{padding-block:clamp(72px,10vw,128px)}
       <div class="sk-ev"><span>근거</span><em>IRB Helper · 210개 테스트</em></div>
     </article>
     <article class="skill-card">
-      <div class="sk-top"><span class="sk-num">04</span><span class="sk-en">Requirements Review</span></div>
-      <h3>서비스 시나리오·요건 검토</h3>
-      <p class="muted">현업 업무를 단계별로 나누고, 단계마다 필요한 정보와 기능을 구체화합니다.</p>
-      <ul class="sk-list"><li>보건의료 메타데이터 중개포털 서비스 시나리오 검토</li><li>운영 요건 검토</li><li>업무 단계별 필요 정보·기능 정리</li></ul>
+      <div class="sk-top"><span class="sk-num">04</span><span class="sk-en">UI Support</span></div>
+      <h3>화면 구성 보조</h3>
+      <p class="muted">실제 운영될 포털의 화면 구성을 보조하며, 업무 단계에 맞는 정보 배치를 익혔습니다.</p>
+      <ul class="sk-list"><li>보건의료 메타데이터 중개포털에 들어갈 화면 구성 보조</li><li>업무 단계별로 필요한 정보와 기능 정리</li></ul>
       <div class="sk-ev"><span>경험</span><em>한국보건의료정보원</em></div>
     </article>
   </div>
@@ -507,7 +507,7 @@ section{padding-block:clamp(72px,10vw,128px)}
   <div class="brief-grid">
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>IRB Helper 기획서 요약</h4><a href="plan-irb.html">전체 기획서 보기 →</a></div>
-    <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>현황</dt><dd>핵심 흐름 구현, 자동 테스트 210개 · 서류 간 일치 검사·e-IRB 연동은 미완성</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
+    <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
   </div>
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>냉집사 기획서 요약</h4><a href="plan-fridge.html">전체 기획서 보기 →</a></div>
@@ -581,7 +581,7 @@ section{padding-block:clamp(72px,10vw,128px)}
   <h3 class="part"><i>6</i>기획서 요약</h3>
   <div class="brief">
     <div class="br-head"><span class="br-tag">기획서 요약</span><h4>IRB Helper 기획서 요약</h4><a href="plan-irb.html">전체 기획서 보기 →</a></div>
-    <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>현황</dt><dd>핵심 흐름 구현, 자동 테스트 210개 · 서류 간 일치 검사·e-IRB 연동은 미완성</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
+    <dl><div class="br-row"><dt>한 줄 정의</dt><dd>연구계획서를 입력하면 공용IRB 신청 서류 초안을 만드는 웹 서비스</dd></div><div class="br-row"><dt>대상</dt><dd>공용IRB 신규 심의를 준비하는 연구자와 연구 실무자</dd></div><div class="br-row"><dt>해결할 문제</dt><dd>같은 연구 정보를 여러 서류에 옮기며 생기는 불일치와 보완 요청</dd></div><div class="br-row"><dt>목표</dt><dd>반복 입력 줄이기 · 빈칸은 질문으로 · 서류의 기준은 하나로</dd></div><div class="br-row"><dt>핵심 기능</dt><dd>유형별 질문 · 계획서 정보 추출 · 연구 사실 시트 · PI 확인 목록 · HWPX 생성</dd></div><div class="br-row"><dt>설계 원칙</dt><dd>AI는 추출과 초안, 사람은 사실 확인. 불확실한 내용은 채우지 않음</dd></div><div class="br-row"><dt>시스템</dt><dd>Vercel 화면 · Render 서버 · Claude API · Supabase</dd></div><div class="br-row"><dt>검증 계획</dt><dd>초안 작성 시간 · 불일치로 인한 보완 요청 · 사실 시트 확인 부담</dd></div></dl>
   </div>
 
   <h3 class="part"><i>7</i>제출 자료</h3>
